@@ -1,0 +1,703 @@
+<html lang="en">
+    <head>
+        <style>
+            body{
+                width:1024px;
+                font-size: 36px;
+                font-family: 'Armata', sans-serif;
+				background: url(images/pt-2.png);
+				color: #eee;
+				text-shadow: 1px 1px 2px #000;
+            }
+
+            #brand {
+                position: fixed;
+                background-image: url(images/logo.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 100% 100%;
+                height: 50%;
+                width: 10%;
+                bottom: 0;
+                margin-bottom: 2%;
+                visibility: hidden;
+            }
+
+            #navi {
+                position: fixed;
+                top: 0;
+                width: 99%;
+                margin: 0 10px 0 0;
+                z-index: 99999999;
+            }
+
+            #navi > div {
+                width: 50%;
+                position: absolute;
+                float: none;
+                display: inline;
+            }
+
+            #navi a {
+                color: #FFF;
+                text-decoration: none;
+                font-size: 10px;
+            }
+
+            #navi a:hover {
+                font-size: 20px;
+            }
+
+            .navi-finish {
+                margin-left: 0;
+            }
+
+            .navi-start {
+                right: 0;
+                text-align: right;
+                margin-right: 0;
+            }
+
+            #start{
+                text-align:center;
+                width:1024px;
+               
+            }
+
+            .title {
+                color: #F90;
+            }
+
+            .step{
+                text-align:center;
+                width:1024px;
+               
+            }
+
+            .step:not(.active) {
+                opacity: 0.1;
+            }
+
+            .step:hover {
+                opacity: 1;
+            }
+
+            
+            .hint_text{
+				margin-top: 120px;
+                font-size:30px;
+                background-color:#282a2f;
+                padding:15px;
+				border: 1px solid #484d52;
+				border-radius: 5px;
+				font-size: 18px;
+				
+            }
+
+            #creator > ul > li:hover {
+                color: #F8102C;
+            }
+
+            #finish {
+                width: 300px;
+            }
+
+            .fallback-message {
+               	color: #eee;
+                line-height: 1.3;
+                width: 780px;
+                padding: 10px 10px 0;
+                margin: 20px auto;
+                border: 1px solid #E4C652;
+                border-radius: 10px;
+              
+            }
+
+            li {
+                margin-left: -40px;
+                margin-bottom: 25px;
+            }
+
+            ul {
+                width: 600px;
+                margin: 0 auto;
+                list-style-type: none;
+            }
+
+            ul > li:hover  {
+                font-weight: bold;
+            }
+
+            ol > li {
+                 list-style-type: upper-alpha; 
+                 font-size: 20px; 
+                 margin: 0;
+                 text-align: left;
+            }
+                
+            span.special {
+                background-color: #F60;
+                padding: 0 10px;
+            }
+
+            .impress-supported .off {
+                display: none;
+            }
+
+            .explain {
+                font-size: 26px;
+                color: #F5CF8B;
+            }
+
+            .fallback-message p {
+                margin-bottom: 10px;
+            }
+
+            .impress-supported .fallback-message {
+                display: none;
+            }
+			em{
+				font-style: normal;
+				border-bottom: 1px solid #484d52;
+				padding-bottom: 2px;
+				color: #d5a830;
+			}
+        </style>
+    </head>
+    <body class="impress-not-supported">
+        <div id="brand"></div>
+        <div id="navi">
+            <div class="navi-finish">
+                <span><a href="#/finish">Go To Finish</a></span>
+            </div>
+            <div class="navi-start">
+                <span><a href="#/start">Go To Start</a></span>
+            </div>
+        </div>
+        <div id="impress">
+            <div id="start" class="step" >
+                <img src="images/logo.png" alt="logo" width="300px">
+                <h3>Aplikasi File Sharing Berbasis Kampus</h3>
+            </div>
+
+            <div id="creator" class="step" data-x="0" data-y="1000" data-z="-10" data-rotate="90">
+                <h2>Created by</h2>
+                <ul>
+                    <li>Analisa Kebutuhan Sistem :<br /> Tafakur (10.230.0060)</li>
+                    <li>Analisa Proses :<br /> Anugrah Fajar Putranto (10.230.0040)</li>
+                    <li>Desain Database :<br /> Syamsul Fatah (10.230.0095)</li>
+                    <li>Desain Interface :<br /> Bryan Ary Virgiawan (10.230.0007)</li>
+                    <li>Coding :<br /> Mokhamad Rofi'udin (10.230.0157)</li>
+                    <li>Testing :<br /> Muhammad Lutfi (10.230.0067)</li>
+                </ul>	
+            </div>
+            
+             <div id="illustration-1" class="step" data-x="1500" data-y="1000" data-z="-20" data-rotate="180">
+                <h2>Illustration</h2>
+                <p>
+                    Dalam kegiatan kampus, dosen sering memberikan tugas kepada mahasiswa, biasanya dalam bentuk makalah hardcopy tapi sering juga dalam bentuk softcopy. Tidak jarang pula, dosen meminta tugas dikumpulkan via email. 
+                    
+                </p>
+                <p>
+                    Di samping itu, modul-Modul dari dosen juga sangat dibutuhkan mahasiswa. Kalau semua mahasiswa meminta modul langsung ke dosen maka akan terjadi antrian panjang di depan kelas. Pemandangan yang aneh, bukan? 
+                </p>
+            </div>
+
+            <div id="illustration-2" class="step" data-x="3000" data-y="1000" data-z="-30" data-rotate="235">
+                <h2>Illustration (part 2)</h2>
+               
+                <p>
+                    Dari kedua ilustrasi di atas, dapat ditarik pertanyaan.   
+                    Kenapa modul tidak ditaruh di sebuah server dan mahasiswa bebas mengunduhnya kapan saja?
+                </p>
+                <p>
+                    Kami mencoba menjawab dengan membuat aplikasi yang bisa digunakan mahasiswa untuk mengunduh modul-modul pembelajaran dan tempat untuk mengunggah tugas-tugas yang secara historis terdokumentasi dengan baik. Sebuah  aplikasi yang bisa memudahkan dosen maupun mahasiswa.
+                </p>  
+            </div>
+            
+            <div id="about-fillatte" class="step" data-x="3000" data-y="3000" data-z="-40">
+                <h2>Fillatte.</h2>
+                <p>
+                    Aplikasi Client-Server yang dibuat khusus bagi kalangan akademik untuk berbagi file antara dosen dan mahasiswa. 
+                </p>
+                <p>
+                    Tujuannya agar dosen lebih mudah membagikan modul kepada para mahasiswanya dan mempermudah dalam melacak tugas yang dikumpulkan mahasiswa.
+                </p>
+                <p>
+                    Bagi mahasiswa, aplikasi ini membantu dalam hal penyimpanan portofolio tugas yang telah dikumpulkan karena aplikasi ini mendokumentasi semua file yang telah diupload berdasarkan kronologinya.
+                </p>
+            </div>
+            
+            <div id="component" class="step" data-x="1500" data-y="3000" data-z="-50">
+                <h2>Component
+                    <span class="off">
+                        Jadi komponen apa saja yang kita butuhkan untuk membuat aplikasi file sharing ini ?
+                    </span>
+                </h2>
+                <ul>
+                    <li>Server <span class="off">adalah komputer untuk menjalankan aplikasi server</span> </li>
+                    <li>Client <span class="off">adalah media bagi user untuk mengakses file (baik mengunggah atau mengunduh)</span> </li>
+                    <li>Database <span class="off">Semua dokumentasi file tersimpan di sini</span> </li>
+                    <li>Storage <span class="off">Tempat semua file system, maupun file unggahan dari user disimpan. </span> </li>
+                </ul>
+            </div>
+            
+            <div id="technology" class="step" data-x="0" data-y="3000" data-z="-60"  data-rotate="235">
+                <h2>Must
+                    <span class="off">
+                        Teknologi apa yang cocok untuk membuat aplikasi file sharing ini ?
+                        
+                    </span>
+                </h2>
+                <ul>
+                    <li>Aplikasi file sharing ini haruslah fleksibel. </li>
+                    <li>Bisa diakses di mana saja dan kapan saja. </li>
+                    <li> <span class="off">Dalam aspek bisnis, aplikasi ini haruslah </span>Mudah dalam pengembangan dan pemeliharan.</li>
+                </ul>
+            </div>
+            
+            <div id="slide7" class="step" data-x="-1500" data-y="3000" data-z="-70">
+                <h3>
+                    Challege Accepted
+                </h3>
+                <h3>Web Technology is The Answer
+                    <span class="off">
+                        Teknologi web adalah yang paling cocok.
+                    </span>
+                </h3>
+                <span class="off">
+                    Kelebihan dari teknologi web antara lain
+                </span>
+                <ul>
+                    
+                </ul>
+            </div>
+            
+            <div id="slide8" class="step" data-x="-3000" data-y="2500" data-z="-80" data-rotate="45">
+                <!-- <h3>Web Technology is </h3> -->
+                <span class="off">
+                    Kelebihan dari teknologi web antara lain
+                </span>
+                <ul>
+                    <li>
+                        Fleksibel
+                        <div class="explain">
+                             Bisa diakses di mana saja dan kapan saja selama server hidup dan ada jaringan internet
+                        </div> 
+                    </li>
+                    <li>
+                        Mendukung Konten Dinamis
+                        <div class="explain">
+                             Dalam era informasi yang serba cepat ini, konten dinamis sudah menjadi menu wajib
+                        </div> 
+                    </li>
+                    <li>
+                        Mendukung Mobilitas
+                        <div class="explain">
+                             Hampir semua handphone dan perangkat bergerak mendukung  teknologi ini. Why not?
+                        </div> 
+                    </li>
+                    <li>
+                        Mudah Dikembangkan
+                        <div class="explain">
+                            Teknologi web adalah teknologi yang banyak diadopsi oleh para pengembang software. 
+                            Pengembangan aplikasi web lebih mudah karena tidak memerlukan compiler. Perubahan code program bisa langsung dilihat.
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+              
+            <div id="slide9" class="step" data-x="-3000" data-y="1500" data-z="-90" data-rotate="135">
+                <h2>
+                    Ingredients
+                    <div class="off">
+                        bahan2 yang diperlukan antar lain.
+                    </div>
+                </h2>
+                <ul>
+                    <li>
+                        Bahasa Pemrograman PHP <span class="off">Bukan Pemberi Harapan Palsu</span>
+                        <div class="explain">
+                            Bahasa Pemrograman yang populer untuk web. Bukan yang terbaik tapi dukungan dari komunitas yang membuat PHP unggul.
+                        </div> 
+                    </li>
+                    <li>
+                        Server Linux <span class="off">Yeah, We like Open Source</span>
+                        <div class="explain">
+                            Seperti yang dikatakan para master. Komputer Server ya Linux. Karena aplikasi ini menggunakan PHP sebagai core-nya, pilihan ke server linux adalah yang terbaik.
+                        </div> 
+                    </li>
+                    <li>
+                        Web Server Apache
+                        <div class="explain">
+                            Web Server terbaik untuk menjalankan PHP adalah Apache. Sebuah proyek Open Source dengan modul yang cukup lengkap.
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="slide10" class="step" data-x="-1500" data-y="1000" data-z="-90" data-rotate="180">
+                <h2>
+                    Ingredients (part 2)
+                </h2>
+                <ul>
+                    <li>
+                        DBMS MySQL <span class="off">Pastilah teman-teman sudah pada kenal</span>
+                        <div class="explain">
+                            Database Management System yang ringan tapi powerfull dalam penggunakan. Mendukung berbagai aplikasi dan Sistem Operasi. Sekali lagi, MySQL cocok digunakan pada lingkungan web.  
+                        </div> 
+                    </li>
+                    <li>
+                        File Hosting
+                        <div class="explain">
+                            Tergantung pada tiap-tiap kampus. Biasanya dijadikan satu dengan web server yang sudah ada di kampus atau membuatnya terpisah. Ini sangatlah optional. 
+                            Tapi yang jelas, penyimpanan file haruslah terintegrasi dengan sistem. 
+                            <span class="off">
+                                Kami menyarankan untuk menggunakan teknologi cloud karena bersifat scalable (mudah dikonfigurasi ulang untuk skala aplikasi lebih besar).
+                            </span> 
+                            <p>
+                                <span class="off"> 
+                                    tidak seperti jika kita mengunggah file ke media file sharing lainnya seperti dropbox, 4shared, atau mediafire. 
+                                </span>
+                            </p>
+                        </div>  
+                    </li>
+                    <li>
+                        Framework PHP CodeIgniter
+                        <div class="explain">
+                            CodeIgniter adalah framework PHP yang ringan tapi bisa diandalkan.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="slide11" class="step" data-x="3000" data-y="2000" data-scale"2" style="width: 300px;">
+                <h1>
+                    We
+                </h1>
+            </div>
+            
+            <div id="slide12" class="step" data-x="1500" data-y="2000" data-scale="3" style="width: 300px;">
+                <h1>
+                    Introduce
+                </h1>
+            </div>
+            
+            <div id="slide13" class="step" data-x="-1500" data-y="2000" data-scale="6" style="width: 300px;">
+                <h1>
+                    Fillatte.
+                </h1>
+            </div>
+           
+            <div id="what" class="step" data-x="4500" data-y="3000" data-rotate="180">
+                <h1>
+                    What exactly Fillatte is?
+                </h1>
+                <div class="off">
+                    apa itu fillatte? 
+                </div>
+            </div> 
+            
+            <div id="analyze" class="step" data-x="4500" data-y="2900" data-rotate="180">
+                <h1>
+                    Let's analyze it!
+                </h1>
+                <div class="off">
+                    mari kita  tengok ke dalam
+                </div>
+            </div>
+            
+            <div id="rancangan-sistem" class="step" data-x="4500" data-y="2500" data-rotate="180">
+                <h1>
+                    Rancangan Sistem
+                </h1>
+                <div class="off">
+                    di awali dengan analisis rancangan sistem
+                </div>
+            </div>
+            
+            <div id="dasar-kerja-sistem" class="step" data-x="4500" data-y="2000" data-rotate="180" style="width: 800px;">
+                <h3>
+                    Dasar Kerja Sistem berbasis Web
+                </h3>
+                <div class="off">
+                    ini adalah sistem kerja web sebagai fondasi dalam membangun aplikasi fillatte
+                </div>
+                    
+                <img src="images/kerja-sistem.jpg" alt="Kinerja Sistem" />
+                <p>
+                    Keterangan:
+                    <ol style="margin-left: 60px;">
+                        <li>
+                            Permintaan data berupa URL (request) dari browser ke server.
+                        </li>
+                        <li>
+                            Pengiriman data berupa HTML (response) dari server ke browser.
+                        </li>
+                        <li>
+                            Permintaan record berupa Query (request) dari server ke database.
+                        </li>
+                        <li>
+                            Pengiriman record berupa Array (response) dari database ke server.
+                        </li>
+                    </ol>
+                </p>
+
+            </div>
+            
+            <div id="kebutuhan-sistem" class="step" data-x="4500" data-y="1000" data-rotate="180" style="width: 800px;">
+                <h3>
+                    Analisa Pengguna Sistem
+                </h3>
+                <div class="off">
+                    siapa saja yang menggunakan sistem dan kebutuhan masing2 pengguna terhadap sistem
+                </div>
+                <table border="1" style="margin-left: 130px;">
+                    <tr>
+                        <th>Pengguna</th>
+                        <th>Deskripsi Kebutuhan dalam Sistem</th>
+                    </tr>
+                    <tr>
+                        <td>Tamu</td>
+                        <td>Cuma bisa mengunduh file yang di share secara public </td>
+                    </tr>
+                    <tr>
+                        <td>Mahasiswa</td>
+                        <td>Dapat mengunduh file non-public</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>Dapat mengunggah file (tugas) untuk dikirim ke dosen</td>
+                    </tr>
+                    <tr>
+                        <td>Dosen</td>
+                        <td>Bisa membuat halaman baru sesuai makul</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Melihat seluruh hasil upload'an dari mahasiswa</td>
+                    </tr>
+                    <tr>
+                        <td>Administrator</td>
+                        <td>Mengatur semua aktivitas, user, file dan manajemen admin</td>
+                    </tr>                    
+                </table>
+            </div>
+            
+            <div id="flowchart" class="step" data-x="4500" data-y="0" data-rotate="180" style="width: 800px;">
+                <h3>
+                    Diagram FLowchart
+                </h3>
+                <img src="images/flowchart.gif" alt="flowchart" height="650px">
+            </div>
+            
+             <div id="erd" class="step" data-x="4500" data-y="-1000" data-rotate="180" style="width: 800px;">
+                <h3>
+                    Desain ERD
+                </h3>
+                <img src="images/erd.gif" alt="erd" height="650px" />
+            </div>
+            
+             <div id="use-case" class="step" data-x="3500" data-y="-1000" data-rotate="90" style="width: 800px;">
+                <h3>
+                    Diagram Use Case
+                </h3>
+                <img src="images/use_case_diagram.jpg" alt="use case" height="650px" />
+            </div>
+            
+            <div id="activity-diagram" class="step" data-x="2500" data-y="-1000" data-rotate="90" style="width: 800px;">
+                <h3>
+                    Diagram Activity
+                </h3>
+                <img src="images/activity_diagram.jpg" alt="diagram" height="650px" />
+            </div>
+            
+            <div id="diagram-class" class="step" data-x="1500" data-y="-1000" data-rotate="90" style="width: 800px;">
+                <h3>
+                    Diagram Class
+                </h3>
+                <img src="images/class_diagram.jpg" alt="class_diagram" height="650px" />
+            </div>
+            
+            <div id="database-intro" class="step" data-x="-700" data-y="-3000" data-rotate="180" style="width: 800px;">
+                <h3>
+                    Desain Database FIllatte.
+                </h3>
+            </div>
+            
+            <div id="database-1" class="step" data-x="-700" data-y="-3000" data-rotate="0" style="width: 800px;">
+                <h3>
+                    Desain Database
+                </h3>
+                <img src="images/database.png" alt="" height="650px" />
+                <div class="off">
+                    ini adalah desain database fillatte.
+                    saya akan sedikit memberi penjelasan. Di sana ada tabel user dengan primary key id, dan mempunyai 2 unik key yaitu username dan email. tujuannya adalah agar tidak ada username maupun email yg sama untuk user yg berbeda.
+                    Kemudian di sini ada tabel dosen dan mahasiswa yang menggunakan primary key nomer induk tapi dengan foreign key user id. maksudnya adalah bahwa user dibagi 2 yaitu mahasiswa dan dosen. kemudian ada tabel administrator adalah tempat user yang diberi amanat sebagai administrator dimasukkan ke dalamnya. administrator adalah yang mengatur seluruh kerja sistem.
+                    kemudian yang menjadi inti adalah tabel upfile dan downfile.
+                    upfile menyimpan semua tentang file yang diupload mahasiswa. di situ ada first_upload yang artinya pertama kali user tersebut upload dan last_upload artinya jika sewaktu2 user akan melakukan revisi akan tercatat juga. kemudian untuk readed_time adalah kapan dosen mendownload / melihat / memeriksa file tersebut.
+                    Downfile adalah catatan file2 yang diupload dosen. Setiap user yg mendownload file tersebut, akan tercatat ke dalam tabel downloading. terima kasih.
+                </div>
+            </div>            
+            
+            <div id="desain-interface" class="step" data-x="-1500" data-y="0" data-rotate="0" style="width: 800px;">
+                <h3>
+                    Desain Interace Fillatte.
+                </h3>
+            </div>
+            
+            <div id="sekuen-tamu" class="step" data-x="500" data-y="-1000" data-rotate="90" style="width: 800px;">
+                <h3>
+                    Diagram Sekuen Tamu
+                </h3>
+                <img src="images/sekuen_tamu_diagram.jpg" alt="" height="650px" />
+            </div>
+            
+            <div id="sekuen-mahasiswa" class="step" data-x="-500" data-y="-1000" data-rotate="90" style="width: 800px;">
+                <h3>
+                    DIagram Sekuen Mahasiswa
+                </h3>
+                <img src="images/sekuen_mahasiswa_diagram.jpg" alt="" height="650px" />
+            </div>
+            
+            <div id="sekuen-dosen" class="step" data-x="-1500" data-y="-1000" data-rotate="0" style="width: 800px;">
+                <h3>
+                    Diagram Sekuen Dosen
+                </h3>
+                <img src="images/sekuen_dosen_diagram.jpg" alt="" height="650px" />
+            </div>
+            
+            <div id="lkt" class="step" data-x="-2500" data-y="0" data-rotate="180" style="width: 800px;">
+                <h3>
+                    LKT
+                </h3>
+            </div>
+            
+            <div id="lkt-login" class="step" data-x="-2700" data-y="-1000" data-rotate="180" style="width: 800px;">
+                <h3>
+                    LKT Login
+                </h3>
+                <img src="images/lkt_login.gif" alt="" height="650px" style="background-color: #FFF;" />
+                <div class="off">
+                    di sini bisa kita lihat halaman login fillatte. yah, standar2 saja sepeti web lainnya.
+                    bedanya fillatte menggunakan NIM atau NID untuk login tapi mengijinkan user tamu juga.
+                </div>
+            </div>
+            
+            <div id="lkt-browse" class="step" data-x="-2700" data-y="-2000" data-rotate="180" style="width: 800px;">
+                <h3>
+                    LKT Browse
+                </h3>
+                <img src="images/lkt_browse.gif" alt="" height="650px" style="background-color: #FFF;" />
+                <div class="off">
+                    di sebelah kiri adalah daftar kategori yang digunakan untuk mencari makul dan jika diklik maka akan ada pilihan untuk dosen
+                    untuk menuju ke halaman download
+                </div>
+            </div>
+            
+            <div id="lkt-page" class="step" data-x="-2700" data-y="-3000" data-rotate="180" style="width: 800px;">
+                <h3>
+                    LKT Page
+                </h3>
+                <img src="images/lkt_page.gif" alt="" height="650px" style="background-color: #FFF;" />
+                <div class="off">
+                    ini adalah halaman di mana user mahasiswa mendownload materi dosen dan mahasiswa mengupload tugas untuk dosen
+                </div>
+            </div>
+            
+            <div id="implementasi" class="step" data-x="-1700" data-y="-3000" data-rotate="0" style="width: 800px;">
+                <h3>
+                    Penjelasan Lengkap mengenai Desain Interface akan disampaikan bersama penjelasan implementasi. <br />(Coding &  Testing)
+                </h3>
+            </div>      
+            
+            
+            
+            <!-- </div> -->
+            
+            <!-- <div id="slide7" class="step" data-x="-10500" data-z="-70">
+                <h2>Web Technology is The Answer
+                    <span class="off">
+                        Teknologi web adalah yang paling cocok.
+                    </span>
+                </h2>
+                <span class="off">
+                    Kelebihan dari teknologi web antara lain
+                </span>
+                <ul>
+                    <li>
+                        Mobilitas Tinggi
+                        <div class="explain">
+                            User bisa mengakses dari media apapun, seperti : desktop, laptop, tablet, pda, maupun handphone 
+                        </div>
+                    </li>
+                    <li>
+                        Mudah Dikembangkan
+                        <div class="explain">
+                            Tidak seperti aplikasi desktop yang harus di-compile ulang. Di web, perubahan pada code program bisa langsung dilihat. Memudahkan pengembang untuk melakukan customize dan penambahan fitur.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+             -->
+            
+            <!-- <div id="slide6" class="step" data-x="6200" data-scale='3'>
+                <p>This Slide Scales 3 Times</p>	
+            </div>
+
+            <div id="slide7" class="step" data-x="4200" data-y='1500' data-z='15'>
+                <p>Away</p>	
+            </div>
+
+            <div id="slide8" class="step" data-x="4900" data-y='1500' data-z='10>
+                <p>Towards</p>	
+            </div>
+
+            <div id="slide9" class="step" data-x="5600" data-y='1500' data-z='-10'>
+                <p>Futher Towards</p>	
+            </div> -->
+
+            <div id="finish" class="step" data-x="2000" data-y="0" data-scale='12'>
+                <p>Thank <span class="special">You</span></p>	
+            </div>
+
+
+        </div>
+
+        <div class="fallback-message">
+            <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+            <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+        </div>
+
+
+        <script type="text/javascript" src="js/impress.js"></script>
+        <script type="text/javascript">impress().init();</script>
+        <script type="text/javascript">
+
+            (function (document){
+                window.addEventListener("load", function() {
+                    var hash = location.hash;
+                    if (  hash != '#/start' ) {
+                        document.getElementById('brand').style.visibility = 'visible';
+                    } else {
+                        document.getElementById('brand').style.visibility = 'hidden';
+                    }
+                });
+                window.addEventListener("hashchange", function() {
+                    var hash = location.hash;
+                    if (  hash != '#/start' ) {
+                        document.getElementById('brand').style.visibility = 'visible';
+                    } else {
+                        document.getElementById('brand').style.visibility = 'hidden';
+                    }
+                });
+
+            })(document);
+
+        </script>
+
+
+    </body>
+</html>
+
+
